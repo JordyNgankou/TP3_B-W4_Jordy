@@ -132,6 +132,8 @@ ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_WHITELIST = (
 	'http://localhost:5173',
 	'http://127.0.0.1:5173',
+	'http://localhost:5174',
+	'http://127.0.0.1:5174',
 )
 
 REST_FRAMEWORK = {
@@ -142,4 +144,6 @@ REST_FRAMEWORK = {
 }
 
 CORS_URLS_REGEX = r"^/.*$"
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

@@ -1,8 +1,7 @@
 from django.db import models
-import uuid
+
 
 class TaskList(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255)
     
     class Meta:
@@ -13,7 +12,6 @@ class TaskList(models.Model):
 
 
 class Task(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255)
     important = models.BooleanField(default=False)
     completed = models.BooleanField(default=False)

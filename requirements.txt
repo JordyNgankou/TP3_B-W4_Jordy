@@ -1,8 +1,9 @@
-asgiref==3.11.1
-Django==6.0.2
-django-cors-headers==4.9.0
-djangorestframework==3.16.1
+asgiref==3.8.1
+Django==5.1.6
+django-cors-headers==4.6.0
+djangorestframework==3.15.2
 mysqlclient==2.2.8
-pillow==12.1.0
-sqlparse==0.5.5
-tzdata==2025.3
+pillow==11.1.0
+sqlparse==0.5.3
+typing_extensions==4.15.0
+tzdata==2024.2
