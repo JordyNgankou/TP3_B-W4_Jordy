@@ -39,15 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
 	'corsheaders',
 	'TP3_B_W4_Jordy_app',
     'TP3_B_W4_Jordy_auth_app',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', # Mettre au début
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware', # Mettre au début ou avant le CommonMiddleware
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -137,6 +139,7 @@ CORS_ORIGIN_WHITELIST = (
 	'http://localhost:5174',
 	'http://127.0.0.1:5174',
 )
+CORS_ALLOW_CREDENTIALS = True
 
 REST_FRAMEWORK = {
 	#'PAGE_SIZE': 10,

@@ -22,6 +22,8 @@ from django.urls import include, path
 urlpatterns = [
 		    path('admin/', admin.site.urls),
 		    path('', include('TP3_B_W4_Jordy_app.urls')),
+            path('auth/', include('TP3_B_W4_Jordy_auth_app.urls'))
+            
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
